@@ -14,10 +14,13 @@ Let’s imaging we have a blog that has many users. Each user has many posts, an
 
 **users**
 
+```
 id | name
-1 | Sonja Sis
-2 | Nicol Hollinghead
-3 | Edison Huseman
+---|------------------
+1  | Sonja Sis
+2  | Nicol Hollinghead
+3  | Edison Huseman
+```
 
 **posts**
 
@@ -28,10 +31,12 @@ id|title|body|user_id
 
 **comments**
 
-id|body|user_id|post_id
-1 | Me too! | 3 | 2
-2 | They are not! | 1 | 2
-3 | You make a good point. | 2 | 1
+```
+id | body          | user_id | post_id
+---|---------------|---------|--------
+1  | Me too!       | 3       | 2
+2  | They are not! | 1       | 2
+```
 
 Now lets say we want to know how many comments each post has received in the last 90 days, 30 days, and 15 days. We're looking for a data structure like this in the end:
 
