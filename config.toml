@@ -1,0 +1,6 @@
+baseURL = "https://cassidy.codes"
+languageCode = "en-us"
+title = "Cassidy K"
+theme = "tale"
+[Author]
+  name = "Cassidy K"

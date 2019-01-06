@@ -1,0 +1,28 @@
+html {
+  font-family: Georgia, "Times New Roman", times, serif;;
+  font-size: 16px;
+
+  @media (min-width: 600px) {
+    font-size: 18px;
+  }
+}
+
+main, footer, .nav-container {
+  width: 90%;
+  @media (min-width: 600px) {
+    width: 80%;
+  }
+}
+
+pre {
+  overflow-x: scroll;
+}
+
+.post {
+  &-title {
+    font-size: 2rem;
+    @media (min-width: 600px) {
+      font-size: 4rem;
+    }
+  } 
+}
