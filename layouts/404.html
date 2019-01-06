@@ -1,0 +1,20 @@
+{{ define "main" }}
+
+<main>
+	<div class="post">
+		{{ partial "single/title.html" . }}
+
+    <div class="catalogue">
+      <ul>
+      {{ range (.Paginate .Pages).Pages }}
+        <li>
+          <a href="{{ .Permalink }}" >{{ .Title }}</a>
+        </li>
+      {{ end }}
+      </ul>
+    </div>
+
+	</div>
+</main>
+
+{{ end }}
