@@ -14,13 +14,13 @@ We took photographs from five locations and applied glitches to the photographs 
 
 ## Toronto Sound Map
 
-![King & Bathurst](/img/posts/toronto-sound-prints/toronto-sound-map.jpg)
+![King & Bathurst](/images/posts/toronto-sound-prints/toronto-sound-map.jpg)
 
 The map is a snapshot of the different peaks and valleys of sound stress that exist in a city at any point in time. The microphone icons on the map correspond to the images below.
 
 ## 1. Bloor & Markham
 
-![Bloor & Markham](/img/posts/toronto-sound-prints/1-slider-bloor-markham.jpg)
+![Bloor & Markham](/images/posts/toronto-sound-prints/1-slider-bloor-markham.jpg)
 
 <audio preload="metadata" controls="constrols" class="audio">
     <source src="/audio/1-bloor_markham.mp3" type="audio/mpeg">
@@ -29,7 +29,7 @@ The map is a snapshot of the different peaks and valleys of sound stress that ex
 
 ## 2. Castle Frank & Bloor
 
-![Castle Frank & Bloor](/img/posts/toronto-sound-prints/3-slider-castle-frank-bloor.jpg)
+![Castle Frank & Bloor](/images/posts/toronto-sound-prints/3-slider-castle-frank-bloor.jpg)
 
 <audio preload="metadata" controls="constrols" class="audio">
     <source src="/audio/3-castle_frank_bloor.mp3" type="audio/mpeg">
@@ -38,7 +38,7 @@ The map is a snapshot of the different peaks and valleys of sound stress that ex
 
 ## 3. Lakeshore & Don
 
-![Lakeshore & Don](/img/posts/toronto-sound-prints/2-slider-lakeshore-don.jpg)
+![Lakeshore & Don](/images/posts/toronto-sound-prints/2-slider-lakeshore-don.jpg)
 
 <audio preload="metadata" controls="constrols" class="audio">
     <source src="/audio/2-lakeshore_don.mp3" type="audio/mpeg">
@@ -47,7 +47,7 @@ The map is a snapshot of the different peaks and valleys of sound stress that ex
 
 ## 4. King & Bathurst
 
-![King & Bathurst](/img/posts/toronto-sound-prints/5-slider-king-bathurst.jpg)
+![King & Bathurst](/images/posts/toronto-sound-prints/5-slider-king-bathurst.jpg)
 
 <audio preload="metadata" controls="constrols" class="audio">
     <source src="/audio/5-king_bathurst.mp3" type="audio/mpeg">
@@ -56,7 +56,7 @@ The map is a snapshot of the different peaks and valleys of sound stress that ex
 
 ## 5. Dundas & Bay
 
-![Dundas & Bay](/img/posts/toronto-sound-prints/4-slider-dundas-bay.jpg)
+![Dundas & Bay](/images/posts/toronto-sound-prints/4-slider-dundas-bay.jpg)
 
 <audio preload="metadata" controls="constrols" class="audio">
     <source src="/audio/4-dundas_bay.mp3" type="audio/mpeg">

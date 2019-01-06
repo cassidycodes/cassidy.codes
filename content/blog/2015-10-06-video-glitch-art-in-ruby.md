@@ -14,15 +14,15 @@ I am going to answer the question in two ways. First from an experience stand po
 
 I came into being a developer from a curiosity about making things with code. I never really thought I’d have a job as a developer, I just wanted to see what I could do.
 
-<img class="img-fluid mx-auto d-block" src="/img/posts/video-glitch-art/civic-images-2.jpg" alt="Civic Images">
+<img class="img-fluid mx-auto d-block" src="/images/posts/video-glitch-art/civic-images-2.jpg" alt="Civic Images">
 
 My very fist application was written in Processing, a Java-based language, and used the now-defunct ProcessingJS to embed it into a WordPress site. Everything I did there is now obsolete since HTML5 is old news now. It’s a little funny to look at now but that was a huge feat for me as my area of study had nothing to do with programming. I taught myself everything for that project.
 
-<img class="img-fluid mx-auto d-block" src="/img/posts/video-glitch-art/toronto-sound-prints.jpg" alt="Toronto Sound Prints">
+<img class="img-fluid mx-auto d-block" src="/images/posts/video-glitch-art/toronto-sound-prints.jpg" alt="Toronto Sound Prints">
 
 Shortly after that project I started collaborating with an urban planner and we were curated into an exhibit that explored themes of noise. For this project we partnered with a research lab from Ryerson to take data they have about the emotional effects of noise on human subjects and we created glitched photographs and a heat map to represent Toronto’s sonic stress environments. For this project I worked in Processing again as my input and output were data and graphic related.
 
-<img class="img-fluid mx-auto d-block" src="/img/posts/video-glitch-art/teto.jpg" alt="TeTo">
+<img class="img-fluid mx-auto d-block" src="/images/posts/video-glitch-art/teto.jpg" alt="TeTo">
 
 Since then I have collaborated on media art projects that have to do with sensory experiences and translating sensory information from one domain to another. This is a picture of a suitcase that makes noise based on the texture of the ground.
 
@@ -30,7 +30,7 @@ Alongside these projects I was learning more about graphic design and taking on 
 
 So that’s a quick background on my portfolio. The important part about this, though, is some of the connections I made. When I was curated into the Noise Project, I met artists and designers who work both in the art world and in the creative industry.
 
-<img class="img-fluid mx-auto d-block" src="/img/posts/video-glitch-art/pizza.gif" alt="Pizza">
+<img class="img-fluid mx-auto d-block" src="/images/posts/video-glitch-art/pizza.gif" alt="Pizza">
 
 Last Spring I was between contracts and a friend that I know from the art world called me up one night with a question about glitch art and mentioned that this was for a commercial contract. She sent me this sample and a link to some work by [ucnv](http://ucnv.org/) an artist who had written a [Ruby Gem](https://github.com/ucnv/aviglitch) that opens up AVI files lets you mess with them.
 

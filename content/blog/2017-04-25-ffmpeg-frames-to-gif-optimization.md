@@ -69,10 +69,10 @@ I won't go into each option we're passing to FFMPEG here, but there are a couple
 
 For our longer gifs, this method cut our file size down by about 40%. The image below works out to just 166K. We get a little bit of colour banding, but I think that's acceptable.
 
-<img src="/img/posts/gif-optimization/final.gif" alt="An animated GIF of my avatar doing a backflip." class="img-fluid mx-auto d-block">
+<img src="/images/posts/gif-optimization/final.gif" alt="An animated GIF of my avatar doing a backflip." class="img-fluid mx-auto d-block">
 
 If you want to peak at the internals of a gif, you can use `gifsicle -e input.gif` to explode the frames. Here's the first three frames of the gif above. Notice that only the pixels that change from one frame to the next are present.
 
-<img src="/img/posts/gif-optimization/final.000.gif" alt="An animated GIF of my avatar doing a backflip." class="img-fluid mx-auto d-block">
-<img src="/img/posts/gif-optimization/final.001.gif" alt="An animated GIF of my avatar doing a backflip." class="img-fluid mx-auto d-block">
-<img src="/img/posts/gif-optimization/final.002.gif" alt="An animated GIF of my avatar doing a backflip." class="img-fluid mx-auto d-block">
+<img src="/images/posts/gif-optimization/final.000.gif" alt="An animated GIF of my avatar doing a backflip." class="img-fluid mx-auto d-block">
+<img src="/images/posts/gif-optimization/final.001.gif" alt="An animated GIF of my avatar doing a backflip." class="img-fluid mx-auto d-block">
+<img src="/images/posts/gif-optimization/final.002.gif" alt="An animated GIF of my avatar doing a backflip." class="img-fluid mx-auto d-block">
