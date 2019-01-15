@@ -156,9 +156,9 @@ LIMIT  1;
 ```
 
 ```
-id | title                       | tag_ids | tag_name | tag_descriptions
----|-----------------------------|---------|----------|-------------------------------
-1  | Blogging about dogs is fun! | 1, 2    | dogs, cute, Posts about dogs, Cute things
+id | title                       | tag_ids | tag_name   | tag_descriptions
+---|-----------------------------|---------|------------|------------------------------
+1  | Blogging about dogs is fun! | 1, 2    | dogs, cute | Posts about dogs, Cute things
 ```
 
 ## Nice work!
