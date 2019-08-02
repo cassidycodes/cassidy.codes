@@ -1,5 +1,5 @@
 ---
-title: "Debugging in Rails"
+title: "Debugging in Rails with Pry, `bundle open` and `puts`"
 date: 2019-08-01T22:23:11-04:00
 ---
 
