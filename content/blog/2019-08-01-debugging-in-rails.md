@@ -5,7 +5,7 @@ date: 2019-08-01T22:23:11-04:00
 
 This week I got to dig into some debugging that I really enjoyed. Well, if you had asked me in the middle of it I might not have been having fun, but I found a solution! I used a handful of tools to approach debugging and they all gave me a little bit more information to solve the problem that I didn't have before. 
 
-Here is a bit of information on each tool that I used. Let me know if you have other Ruby or Rails debugging tips!
+Here is a bit about each tool and what I find useful about it. Let me know if you have other Ruby or Rails debugging tips!
 
 ## Pry!
 
@@ -117,7 +117,7 @@ Okay, enough fiddling around with pry. Let's type `continue` and we'll finally s
 
 ## Bundle Open
 
-What happens when you start stepping through a call stack and you find yourself wandering around stack frames that belong to a Ruby Gem you're using. This happens to me a lot and sometimes I like to go right to the source.
+What happens when you start stepping through a call stack in pry and you find yourself wandering around stack frames that belong to a Ruby Gem you're using. When this happens to me I like to go checkout what the code actually looks like in that gem with `bundle open`.
 
 Here's the error I was working on today. You'll see that the error is raised in a third party library. I might have made a mistake that caused it, but my mistake is so far down the call stack that I don't see it!
 
@@ -135,7 +135,7 @@ I had no idea what was `nil` here that shouldn't be so I ran `bundle open carrie
 
 ## `puts`!!!
 
-Sometimes pry isn't going to work for you. This is especially true if you're using a multi-threaded server or Sidekiq to process background jobs. When this happens, you'll get an interactive prompt for a few seconds then you'll get booted out because another process is trying to write logs to the same master process. Argh! This can be frustrating.
+Sometimes pry isn't going to work for you. This is especially true if you're using a multi-threaded web server or Sidekiq to process background jobs. When this happens, you'll get an interactive prompt for a few seconds then you'll get booted out because another process is trying to write logs to the same master process. Argh! This can be frustrating.
 
 My favourite thing to do here is to print my own logs. I try to make these stand out so I don't miss them when the logs are going by. Here's some pseudocode that resembles the problem I was solving today.
 
