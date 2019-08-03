@@ -116,7 +116,7 @@ set -g window-status-current-format "#[fg=#44475a]#[bg=#bd93f9]#[fg=#f8f8f2]#
 set -g window-status-format "#[fg=#f8f8f2]#[bg=#44475a]#I #W #[fg=#44475a] "
 ```
 
-This looks similar to what we have above, but there's some style tricks we need to do. I wanted to have triangular shapes delineating my windows similar to what Vim Powerline does. In order to get the style to work I have to toggle the foreground and background colours before and after the . Then to display the name of the window I'm using `#I`, which is a short-hand for the `window_index` variable and `#W`, which is short for `window_name`
+This looks similar to what we have above, but there's some style tricks we need to do. I wanted to have triangular shapes delineating my windows similar to what Vim Powerline does. In order to get the style to work I have to toggle the foreground and background colours before and after the ``. Then to display the name of the window I'm using `#I`, which is a short-hand for the `window_index` variable and `#W`, which is short for `window_name`
 
 Almost done! `status-right` should look pretty familiar now.
 
