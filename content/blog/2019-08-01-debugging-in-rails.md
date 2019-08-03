@@ -147,7 +147,7 @@ def filename
    puts model.persisted?
    puts model.image_changed?
    puts '---------------------'
-   retur nmodel.attributes['image'] if model.persisted? && !model.image_changed?
+   return model.attributes['image'] if model.persisted? && !model.image_changed?
 
    new_filename = "#{SecureRandom.hex}.#{file&.extension}"
    puts new_filename
