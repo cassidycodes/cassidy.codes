@@ -1,5 +1,5 @@
 ---
-title: "2019 08 06 Favourite Debugging Trick"
+title: "Favourite Debugging Trick"
 date: 2019-08-06T23:37:38-04:00
 ---
 
