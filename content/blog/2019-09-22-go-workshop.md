@@ -1,6 +1,6 @@
 ---
-title: "I learned Go!
-date: 2019-09-22T13:36:38-04:00
+title: "Learning Go"
+date: 2019-09-22T21:37:54-04:00
 ---
 
 This weekend I went to a workshop to learn Go that was organized by [Denise Yu](https://twitter.com/deniseyu21). I wasn't able to stay for the whole thing, but I got so learn some fundamentals of Go. It was really nice to focus a day learning something new.
@@ -182,4 +182,5 @@ I had fun learning Go! The language feels very familiar to me. The things I've f
 You can checkout all my code from the workshop at the links below. I'll also link to the guide we were using.
 
 My code: https://github.com/cassidycodes/hellogo
+
 Practical Go: https://idiomat.gitbook.io/gobridge/
