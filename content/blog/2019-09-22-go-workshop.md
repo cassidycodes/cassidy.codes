@@ -136,11 +136,13 @@ package main
 import "fmt"
 
 func main() {
-  // Initialize a slice with two members.
-  mySlice := make([]string, 2)
+  // Initialize a slice with four members.
+  mySlice := make([]string, 4)
 
-  mySlice[0] = "of"
-  mySlice[1] = "pizza"
+  mySlice[0] = "My"
+  mySlice[1] = "slice"
+  mySlice[2] = "of"
+  mySlice[3] = "pizza"
   // Append two strings to the slice!
   append(mySlice, "is", "good!")
 
