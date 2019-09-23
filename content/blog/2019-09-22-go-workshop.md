@@ -27,7 +27,7 @@ Go couldn't find my library! This is because my `GOPATH` was empty and Go looked
 One of the TAs at the event said that he sets the `GOPATH` every time he `cd`s into a new project. I decided to make an alias for this so that I could set the `GOPATH` quickly when I moved into a new directory.
 
 ```bash
-# Set GOPATH to current dirextory and give helpful feedback.
+# Set GOPATH to current directory and give helpful feedback.
 alias setgopath="export GOPATH=`pwd` && echo \"GOPATH is set to $GOPATH\""
 # Really tiny alias because I'm lazy.
 alias sgp=setgopath
@@ -133,10 +133,13 @@ To create a slice, you use the builtin function `make`, which is used to initial
 ```go
 package main
 
-import "fmt"
+import(
+  "fmt"
+  "strings"
+)
 
 func main() {
-  // Initialize a slice with four members.
+  // Initialize a slice with members.
   mySlice := make([]string, 4)
 
   mySlice[0] = "My"
@@ -146,7 +149,7 @@ func main() {
   // Append two strings to the slice!
   append(mySlice, "is", "good!")
 
-  fmt.PrintLn(mySlice)
+  fmt.PrintLn(strings.Join(mySlice, " "))
   // => My slice of pizza is good!
 }
 ```
