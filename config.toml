@@ -4,5 +4,11 @@ title = "Cassidy K"
 theme = "tale"
 pygmentsStyle = "monokailight"
 pygmentsCodefences = true
+enableRobotsTXT = true
+canonifyURLs = true
+enableRSS = true
+enableGitInfo= true
 [Author]
   name = "Cassidy K"
+[permalinks]
+    post = "/blog/:title/"

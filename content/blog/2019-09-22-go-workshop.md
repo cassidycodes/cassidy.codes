@@ -1,6 +1,11 @@
 ---
 title: "Learning Go"
 date: 2019-09-22T21:37:54-04:00
+keywords:
+  - Golang
+  - Go
+  - Go Basics
+  - Workshop
 ---
 
 This weekend I went to a workshop to learn Go that was organized by [Denise Yu](https://twitter.com/deniseyu21). I wasn't able to stay for the whole thing, but I got so learn some fundamentals of Go. It was really nice to focus a day learning something new.
