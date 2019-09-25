@@ -28,9 +28,12 @@
 		<link rel="apple-touch-icon" sizes="180x180" href="{{ "images/apple-touch-icon.png" | relURL }}">
 
 		<!-- RSS -->
+    <!-- FIXME Link doesn't render-->
     <link href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end  }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
 
-    <!-- Schema.org -->
+    <!-- SEO -->
     {{ partial "seo-schema" .  }}
+    <link rel="canonical" href="{{ .Permalink }}" />
+    {{ template "_internal/opengraph.html" .  }}
 	</head>
 

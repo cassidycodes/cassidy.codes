@@ -6,7 +6,17 @@ keywords:
   - Go
   - Go Basics
   - Workshop
+audio: []
+description: I went to a workshop to learn Go this weekend. Here's what I learned!
+images:
+  - images/posts/go-workshop/skeletons.jpg
+series: ["go"]
+tags: []
+videos: []
+
 ---
+
+
 
 This weekend I went to a workshop to learn Go that was organized by [Denise Yu](https://twitter.com/deniseyu21). I wasn't able to stay for the whole thing, but I got so learn some fundamentals of Go. It was really nice to focus a day learning something new.
 
