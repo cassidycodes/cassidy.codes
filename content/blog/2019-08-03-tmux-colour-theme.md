@@ -1,6 +1,15 @@
 ---
 title: "Creating a tmux Colour Theme"
 date: 2019-08-03T15:22:43-04:00
+keywords:
+  - Tmux
+  - dotfiles
+  - Dracula Theme
+description: I made a Dracula colout theme for tmux and I love it! Here's a bit about how to customize tmux.
+images:
+  - images/posts/tmux-theme/tmux-dracula.png
+series: ["dotfiles"]
+
 ---
 
 I recently decided to use the [Dracula](https://draculatheme.com/) in my coding environment. Love it or hate it, I've been working with Vim and [tmux](https://github.com/tmux/tmux) for the past two years and I inherited my Vim and tmux configurations from someone else. I dove head first into this environment and got used to it pretty quickly, but I never spent much time configuring it.
