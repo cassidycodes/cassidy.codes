@@ -7,7 +7,7 @@ keywords:
   - Shared Contexts
   - Testing
 audio:
-description:
+description: How to use shared examples and shared contexts in RSpec!
 images:
   - images/posts/rspec-logo.png
 series:
