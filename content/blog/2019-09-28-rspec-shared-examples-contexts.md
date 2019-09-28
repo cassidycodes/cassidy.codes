@@ -196,7 +196,7 @@ Here, the shared context is setting up a new subject for us. When we want to cha
 
 ## Conclusion
 
-I would choose carefully when implementing these though! Like [Sandi Metz says](https://www.sandimetz.com/blog/2016/1/20/the-wrong-abstraction), "duplication is far cheaper than the wrong abstraction"!.
+I would choose carefully when implementing these though! Like [Sandi Metz says](https://www.sandimetz.com/blog/2016/1/20/the-wrong-abstraction), "duplication is far cheaper than the wrong abstraction."
 
 If you find your shared contexts always have a block that overrides some defaults, or your shared examples require lots of parameters to setup, you might have the wrong abstraction.
 
