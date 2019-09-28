@@ -14,7 +14,7 @@ enableGitInfo= true
   post = "/blog/:title/"
 [params]
   description = "Cassidy K is a Software Engineer in Toronto. She works in Ruby on Rails, Javascript, and anything else she can get her hands on."
-  images = ["site-feature-image.jpg"]
+  images = ["favicon/apple-icon-180x180.png"]
   title = "Cassidy K"
 [taxonomies]
   series = "series"
