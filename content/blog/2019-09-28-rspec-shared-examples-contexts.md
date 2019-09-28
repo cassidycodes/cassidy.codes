@@ -1,5 +1,5 @@
 ---
-title: "2019 09 28 Shared Examples and Contexts in RSpec"
+title: "Shared Examples and Contexts in RSpec"
 date: 2019-09-28T12:54:41-04:00
 keywords:
   - RSpec
