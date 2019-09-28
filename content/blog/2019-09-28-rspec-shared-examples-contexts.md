@@ -19,9 +19,9 @@ videos:
 
 ---
 
-When I first learned testing in Rails, I learned [RSpec](http://rspec.info/), but then In my last job I wrote most of my tests in [minitest](https://github.com/seattlerb/minitest). I enjoyed the challenge of learning a new test framework and found the tests super fast!
+When I first learned testing in Rails, I learned [RSpec](http://rspec.info/), but then in my last job, I wrote most of my tests in [minitest](https://github.com/seattlerb/minitest). I enjoyed the challenge of learning a new test framework and found the tests super fast!
 
-But recently, I've been working on a project in RSpec again and I have a renewed appreciation for it! In this post I'm going to talk about how to define and use shared examples and shared contexts in RSpec.
+But recently, I've been working on a project in RSpec again and I have a renewed appreciation for it! In this post, I'm going to talk about how to define and use shared examples and shared contexts in RSpec.
 
 I'm going to start with shared examples here because shared contexts are very similar in how you set them up.
 
@@ -29,7 +29,7 @@ I'm going to start with shared examples here because shared contexts are very si
 
 Shared examples are a set of examples that you want to use in multiple files. You'll want to use shared examples when you're writing a Module or a [Concern](https://api.rubyonrails.org/classes/ActiveSupport/Concern.html) in Rails.
 
-In this example below we have two models, `Door` and `Phone`, and they both can be locked. When we lock one of these things, we set an attribute on the model called `locked_at`, which is a timestamp of when the item was locked.
+In this example below, we have two models, `Door` and `Phone`, and they both can be locked. When we lock one of these things, we set an attribute on the model called `locked_at`, which is a timestamp of when the item was locked.
 
 ```ruby
 # app/models/door.rb
@@ -125,7 +125,7 @@ end
 
 ### Gotchas!
 
-RSpec doesn't auto load any files for you! You'll see that I've put my shared examples in `spec/support/shared_examples/`. You need to tell RSpec to `require` this file.
+RSpec doesn't auto-load any files for you! You'll see that I've put my shared examples in `spec/support/shared_examples/`. You need to tell RSpec to `require` this file.
 
 ```ruby
 # spec/rails_helper.rb
@@ -136,7 +136,7 @@ Dir["./spec/support/**/*.rb"].sort.each { |f| require f  }
 
 What about times when you have to do a whole bunch of contextual setup in your tests? It gets super annoying when you have to do this setup twice. Shared contexts define code that will be evaluated before the tests run.
 
-Lets add a method called `locked?` to our module so that we can see if an door or phone is locked.
+Let's add a method called `locked?` to our module so that we can see if a door or phone is locked.
 
 ```ruby
 # app/models/concerns/lockable.rb
@@ -198,7 +198,7 @@ Here, the shared context is setting up a new subject for us. When we want to cha
 
 I would choose carefully when implementing these though! Like [Sandi Metz says](https://www.sandimetz.com/blog/2016/1/20/the-wrong-abstraction), "duplication is far cheaper than the wrong abstraction."
 
-If you find your shared contexts always have a block that overrides some defaults, or your shared examples require lots of parameters to setup, you might have the wrong abstraction.
+If you find your shared contexts always have a block that overrides some defaults, or your shared examples require lots of parameters to set up, you might have the wrong abstraction.
 
 Shared contexts and examples are great for cleaning up your code when you need them though!
 
