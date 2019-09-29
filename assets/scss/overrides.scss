@@ -6,7 +6,6 @@ $icon-size: 45px;
 html {
   font-family: Georgia, "Times New Roman", times, serif;
   font-size: 16px;
-
   @media (min-width: 600px) {
     font-size: 18px;
   }
@@ -18,9 +17,9 @@ body {
   &.dark {
     background-color: $dark;
 
-		h1, p {
-			color: $light-ui;
-		}
+    h1, p {
+      color: $light-ui;
+    }
   }
 }
 
