@@ -17,10 +17,15 @@
 
 		<!-- CSS -->
 		{{- $inServerMode	:= .Site.IsServer }}
-		{{- $cssTarget		:= "css/style.css" }}
-		{{- $cssOptions		:= cond ($inServerMode) (dict "targetPath" $cssTarget "enableSourceMap" true) (dict "targetPath" $cssTarget "outputStyle" "compressed") }}
-		{{- $style			:= resources.Get "scss/main.scss" | toCSS $cssOptions }}
+		{{- $cssTarget := "css/style.css" }}
+		{{- $cssOptions := cond ($inServerMode) (dict "targetPath" $cssTarget "enableSourceMap" true) (dict "targetPath" $cssTarget "outputStyle" "compressed") }}
+		{{- $style := resources.Get "scss/main.scss" | toCSS $cssOptions }}
  		<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+
+    <!-- JS -->
+		{{- $javascript := resources.Get "javascript/main.js" }}
+    {{- $js := cond ($inServerMode) ($javascript) ($javascript | resources.Minify) }}
+    <script type="text/javascript" src="{{ $js.RelPermalink }}"></script>
 
 		<!-- Favicon -->
 		<link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
