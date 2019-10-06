@@ -12,8 +12,6 @@ html {
 }
 
 body {
-  transition: all 300ms ease;
-
   &.dark {
     background-color: $dark;
 

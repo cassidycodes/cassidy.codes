@@ -1,4 +1,4 @@
-// Get the user's color scheme preference.
+// Get the user's colour scheme preference.
 // https://codepen.io/MrGrigri/pen/XQmWBv
 function preference() {
   if (!window.matchMedia('(prefers-color-scheme)').matches) { return undefined };
@@ -31,9 +31,28 @@ function setUserPreference() {
   localStorage.setItem('colorScheme', (getUserPreference() === 'dark' ? 'light' : 'dark'));
 };
 
+function reqListener () {
+  console.log(this.responseText);
+}
+
+async function fetchPage(url) {
+  const resp = await fetch(url);
+  return resp.text();
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   getUserPreference() === 'dark' ? toggleColorScheme() : '';
+  var $internalLinks = $("a[href^='http://localhost:1313']");
+  var oReq = new XMLHttpRequest();
+  oReq.addEventListener("load", reqListener);
 
+  $internalLinks.forEach(function(anchorTag) {
+    anchorTag.addEventListener('click', async function(e) {
+      e.preventDefault();
+      var data = await fetchPage(anchorTag.getAttribute('href'));
+      $('html')[0].innerHTML = data;
+    });
+  });
   // And select the elements we're going to be working with.
   // The slector returns a NodeList, but we only care about the first one.
   $('.mask')[0].addEventListener('click', function() {
