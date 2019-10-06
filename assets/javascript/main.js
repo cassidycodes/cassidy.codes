@@ -10,7 +10,11 @@ function preference() {
 // Let's make a jQuery-like slector
 function $(selector, context) {
   return (context || document).querySelectorAll(selector);
-}
+};
+
+function shouldSetToDarkScheme() {
+  getUserPreference() === 'dark' && document.querySelector('body').className !== 'dark';
+};
 
 // Toggle dark/light colorScheme.
 function toggleColorScheme() {
@@ -38,25 +42,46 @@ function reqListener () {
 async function fetchPage(url) {
   const resp = await fetch(url);
   return resp.text();
-}
+};
 
-document.addEventListener('DOMContentLoaded', function () {
-  getUserPreference() === 'dark' ? toggleColorScheme() : '';
+const localXHR = new Event('localXHR');
+const parser = new DOMParser();
+
+function renderHTML(html) {
+  var htmlDoc = parser.parseFromString(html, 'text/html');
+  if(getUserPreference() == 'dark') {
+    htmlDoc.querySelector('.icon-wrap').className = 'active';
+    htmlDoc.querySelector('body').className = 'dark';
+  }
+  $('body')[0].innerHTML = htmlDoc.getElementsByTagName('body')[0].innerHTML;
+  document.dispatchEvent(localXHR);
+};
+
+function initialize() {
+  shouldSetToDarkScheme() ? toggleColorScheme() : '';
+
+  // Find all links to cassidy.codes and turn them into XHR requests.
   var $internalLinks = $("a[href^='http://localhost:1313']");
-  var oReq = new XMLHttpRequest();
-  oReq.addEventListener("load", reqListener);
-
   $internalLinks.forEach(function(anchorTag) {
     anchorTag.addEventListener('click', async function(e) {
       e.preventDefault();
-      var data = await fetchPage(anchorTag.getAttribute('href'));
-      $('html')[0].innerHTML = data;
+      var html = await fetchPage(anchorTag.getAttribute('href'));
+      renderHTML(html);
     });
   });
+
   // And select the elements we're going to be working with.
   // The slector returns a NodeList, but we only care about the first one.
   $('.mask')[0].addEventListener('click', function() {
     toggleColorScheme();
     setUserPreference();
   });
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  initialize();
+});
+
+document.addEventListener('localXHR', function () {
+  initialize();
 });
