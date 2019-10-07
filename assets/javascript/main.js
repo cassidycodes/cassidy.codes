@@ -20,8 +20,8 @@ function getColorSchemePreference() {
   return localStorage.getItem('colorScheme');
 };
 
-// Store this setting for the next request!
-function setUserPreference() {
+function handleToggle() {
+  toggleColorScheme();
   // localStorage only saves strings. Booleans will get stringified here.
   localStorage.setItem('colorScheme', (getColorSchemePreference() === 'dark' ? 'light' : 'dark'));
 };
@@ -37,6 +37,7 @@ const parser = new DOMParser();
 function renderHTML(html) {
   var htmlDoc = parser.parseFromString(html, 'text/html');
   if(getColorSchemePreference() == 'dark') {
+    console.log('dark')
     htmlDoc.querySelector('.icon-wrap').className = 'active';
     htmlDoc.querySelector('body').className = 'dark';
   }
@@ -44,30 +45,36 @@ function renderHTML(html) {
   document.dispatchEvent(localXHR);
 };
 
-function initialize() {
+async function renderPage(url) {
+  var html = await fetchPage(url);
+  renderHTML(html);
+};
+
+function initializeAnchorTags() {
   // Find all links to cassidy.codes and turn them into XHR requests.
   document.querySelectorAll("a[href^='http://localhost:1313']").forEach(function(anchorTag) {
     anchorTag.addEventListener('click', async function(e) {
       e.preventDefault();
-      var html = await fetchPage(anchorTag.getAttribute('href'));
-      renderHTML(html);
+      var url = anchorTag.getAttribute('href');
+      renderPage(url);
+      history.pushState({url: url}, url, url);
     });
   });
 
-  // And select the elements we're going to be working with.
-  // The slector returns a NodeList, but we only care about the first one.
-  document.querySelector('.mask').addEventListener('click', function() {
-    toggleColorScheme();
-    setUserPreference();
-  });
-}
+  document.querySelector('.mask').addEventListener('click', handleToggle);
+};
 
 document.addEventListener('DOMContentLoaded', function () {
   getColorSchemePreference() === 'dark' ? toggleColorScheme() : '';
-  initialize();
+  initializeAnchorTags();
+});
+
+// FIXME: sometimes e.state is null
+window.addEventListener("popstate", function(e) {
+  renderPage(e.state.url);
 });
 
 document.addEventListener('localXHR', function () {
   // We have to re-initialize our "click" listeners here!
-  initialize();
+  initializeAnchorTags();
 });
