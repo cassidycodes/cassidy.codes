@@ -103,12 +103,12 @@ What happens if you need to pass some parameters that might be different in one 
 ```ruby
 # spec/models/door_spec.rb
 RSpec.describe Door, type: :model do
-  it_behaves_like 'Lockable', subject.create
+  it_behaves_like 'Lockable'
 end
 
 # spec/models/phone_spec.rb
 RSpec.describe Phone, type: :model do
-  it_behaves_like 'Lockable', subject.create
+  it_behaves_like 'Lockable'
 end
 
 # spec/support/shared_examples/lockable_spec.rb
