@@ -112,11 +112,13 @@ RSpec.describe Phone, type: :model do
 end
 
 # spec/support/shared_examples/lockable_spec.rb
-RSpec.shared_examples 'Lockable' do |lockable|
+RSpec.shared_examples 'Lockable'
+  subject { described_class.create  }
+
   describe '#lock' do
     it 'sets locked_at to current time' do
       freeze_time do
-        expect { lockable.lock! }.to change { subject.locked_at }.from(nil).to(Time.now.utc)
+        expect { subject.lock! }.to change { subject.locked_at }.from(nil).to(Time.now.utc)
       end
     end
   end
