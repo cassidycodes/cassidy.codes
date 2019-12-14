@@ -103,22 +103,22 @@ What happens if you need to pass some parameters that might be different in one 
 ```ruby
 # spec/models/door_spec.rb
 RSpec.describe Door, type: :model do
-  it_behaves_like 'Lockable'
+  it_behaves_like 'Lockable', Time.now.utc
 end
 
 # spec/models/phone_spec.rb
 RSpec.describe Phone, type: :model do
-  it_behaves_like 'Lockable'
+  it_behaves_like 'Lockable', Time.now.utc
 end
 
 # spec/support/shared_examples/lockable_spec.rb
-RSpec.shared_examples 'Lockable'
+RSpec.shared_examples 'Lockable' do |time|
   subject { described_class.create  }
 
   describe '#lock' do
     it 'sets locked_at to current time' do
       freeze_time do
-        expect { subject.lock! }.to change { subject.locked_at }.from(nil).to(Time.now.utc)
+        expect { subject.lock! }.to change { subject.locked_at }.from(nil).to(time)
       end
     end
   end
