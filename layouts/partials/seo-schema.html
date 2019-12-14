@@ -17,7 +17,7 @@
     "accountablePerson" : "{{ range .Site.Author }}{{ . }}{{ end }}",
     "copyrightHolder" : "{{ range .Site.Author }}{{ . }}{{ end }}",
     "copyrightYear" : "{{ .Date.Format "2006" }}",
-    "datePublished": "{{ .Date }}",
+    "datePublished": "{{ time .Date }}",
     "dateModified" : "{{ .Lastmod }}",
     "url" : "{{ .Permalink }}",
     "wordCount" : "{{ .WordCount }}",
