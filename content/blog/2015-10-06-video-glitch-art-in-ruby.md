@@ -2,6 +2,7 @@
 date = "2015-10-06"
 title = "Video Glitch Art in Ruby"
 slug = "2015/10/06/video-glitch-art-in-ruby"
+description = "I gave a talk on creating video glitch art in Ruby. Here are my speaker notes and some videos."
 +++
 
 This is the text from a talk about my video glitch work on Fido's [Mobile Music Video](http://mobilemusicvideo.ca). Credit for making this kind of work so fun goes to [UCNV](https://github.com/ucnv/aviglitch) for creating the AviGlitch Gem.
