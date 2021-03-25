@@ -12,6 +12,9 @@ main, footer, .nav-container {
   @media (min-width: 600px) {
     width: 80%;
   }
+  element {
+	fill: #0A66C2;
+}
 }
 
 pre {
@@ -24,5 +27,23 @@ pre {
     @media (min-width: 600px) {
       font-size: 4rem;
     }
-  } 
+  }
+}
+
+.social-icons {
+	display: block;
+	width: 177px;
+	margin: auto;
+	padding: 0;
+
+  li {
+    display: inline;
+  }
+
+  .social-icon {
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    margin: 9px;
+  }
 }
