@@ -1,25 +1,8 @@
+
 {{ define "main" }}
 
 <main>
-  {{ .Content }}
-
-  <ul class="social-icons">
-      <li>
-        <a href="https://dev.to/cassidycodes" class="social-icon">
-          {{ partial "svg/devto-logo.html" . }}
-        </a>
-      </li>
-      <li>
-        <a href="https://www.linkedin.com/in/cassidyk/" class="social-icon">
-          {{ partial "svg/linkedin-logo.html" . }}
-        </a>
-      </li>
-      <li>
-        <a href="https://github.com/cassidycodes" class="social-icon">
-          {{ partial "svg/github-logo.html" . }}
-        </a>
-      </li>
-  </ul>
+	{{ partial "index/introduction.html" . }}
 </main>
 
 {{ end }}

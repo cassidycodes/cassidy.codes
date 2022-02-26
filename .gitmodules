@@ -5,3 +5,6 @@
 	path = public
 	url = git@github.com:cassidycodes/cassidycodes.github.io.git
 	branch = master
+[submodule "themes/HugoTeX"]
+	path = themes/HugoTeX
+	url = https://github.com/HelloRusk/HugoTeX

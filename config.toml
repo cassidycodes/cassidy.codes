@@ -1,7 +1,26 @@
 baseURL = "https://cassidy.codes"
 languageCode = "en-us"
-title = "Cassidy K"
+title = "Cassidy Scheffer"
 theme = "tale"
+[menu]
+  [[menu.main]]
+    identifier = "LinkedIn"
+    name = "LinkedIn"
+    title = "LinkedIn"
+    url = "https://www.linkedin.com/in/cassidyscheffer/"
+    weight = 0
+  [[menu.main]]
+    identifier = "GitHub"
+    name = "GitHub"
+    title = "GitHub"
+    url = "https://github.com/cassidycodes"
+    weight = 0
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    title = "Posts"
+    url = "/blog/"
+    weight = 1
 pygmentsStyle = "monokailight"
 pygmentsCodefences = true
 enableRobotsTXT = true
@@ -9,12 +28,12 @@ canonifyURLs = true
 enableRSS = true
 enableGitInfo= true
 [Author]
-  name = "Cassidy K"
+  name = "Cassidy Scheffer"
 [permalinks]
   post = "/blog/:title/"
 [params]
-  description = "Cassidy K is a Software Engineer in Toronto."
+  description = "Cassidy Scheffer"
   images = ["favicon/apple-icon-180x180.png"]
-  title = "Cassidy K"
+  title = "Cassidy Scheffer"
 [taxonomies]
   series = "series"
